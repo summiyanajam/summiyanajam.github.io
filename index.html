@@ -9,6 +9,38 @@
 
 <title>Home – Summiya Najam</title>
 <style>
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.main-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: #5c5c5c;
+  font-size: 30px;
+  text-transform: uppercase;
+  line-height: normal;
+}
+
+h1.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500; 
+  color: #484848;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #484848;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -17,14 +49,279 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em;
   vertical-align: middle;
+}
+
+/* Add custom styles */
+.navbar {
+    flex-direction: column;
+    padding: 0;
+    border-bottom: none !important;
+    background-color: white !important;
+    position: static !important;
+}
+
+.navbar-title {
+    color: #333 !important;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: #8e8e8e !important;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.about-image {
+  width: 300px !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  position: relative;
+  top: 0;
+}
+
+.about-contents {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+a, a:link, a:visited {
+    color: #8dc7d3 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #8dc7d3 !important;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.name-container {
+  text-align: center;
+  margin: 50px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.decorative-line {
+    display: inline-block;
+    width: 200px;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.nav-links-container {
+    text-align: center;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-link {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #8e8e8e !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 5px 10px !important;
+    cursor: pointer;
+    position: relative;
+    /* transition: background-color 0.2s ease; */
+}
+
+.navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link, .nav-link:link, .nav-link:visited {
+    color: #8e8e8e !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 5px 10px !important;
+}
+
+.nav-link:hover {
+    color: #484848 !important;
+    text-decoration: none !important;
+    background-color: #f6f6f6 !important;
+}
+
+.navbar {
+    flex-direction: column;
+    padding: 0;
+}
+
+.navbar-container {
+    width: 100%;
+}
+
+.nav-link.active {
+    background-color: #f6f6f6 !important;
+    border-bottom: none !important;
+    padding: 5px 15px !important;
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.nav-link {
+    cursor: pointer;
+    position: relative;
+}
+
+#home {
+    display: block;
+}
+
+.two-column-container {
+    display: flex;
+    gap: 60px;
+    max-width: 1200px;
+    padding: 40px 20px;
+}
+
+.content-column {
+    flex: 1;
+    max-width: 800px;
+}
+
+.image-column {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+.about-image {
+    width: 100% !important;
+    height: auto !important;
+    margin-top: 0 !important;
+    position: relative;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .two-column-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .image-column {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.quarto-container {
+    margin-top: 0;
+}
+
+#quarto-header {
+    position: static;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar {
+    position: static !important;
+    width: 100%;
+}
+
+.headroom {
+    transition: none !important;
+    transform: none !important;
+}
+
+.navbar-expand {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact p {
+    margin: 0;
+    line-height: 1.8;
+    color: #484848;
+}
+
+#contact a {
+    color: #8dc7d3 !important;
+    text-decoration: none;
+}
+
+#contact h1.title {
+    margin-bottom: 25px;
+}
+
+#contact {
+    text-align: left;
+    max-width: 800px;
+    padding: 0;
+}
+
+#contact .title {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #484848;
+}
+
+#contact p {
+    margin: 0;
+    line-height: 1.8;
+    color: #484848;
+    text-align: left;
+    font-size: 15px;
+}
+
+.content-column {
+    flex: 1;
+    max-width: 800px;
+    padding-left: 0;
+}
+
+.secondary-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.paper-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* Add some spacing between address and contact info */
+#contact p[style*="margin-top"] {
+    margin-top: 30px !important;  /* More spacing between address and email */
 }
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -55,79 +352,156 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:description" content="Summiya Najam’s personal website">
 <meta name="twitter:image" content="headshot.jpeg">
 <meta name="twitter:card" content="summary_large_image">
+
+<!-- Raleway font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class='navbar-brand' href='index.html'>
-    <span class="navbar-title">Summiya Najam</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-            <div class="quarto-navbar-tools">
+  <header id="quarto-header">
+    <nav class="navbar navbar-expand">
+        <div class="navbar-container container-fluid">
+            <div class="text-center w-100 position-relative">
+                <div class="name-container">
+                    <span class="main-title">SUMMIYA NAJAM</span>
+                </div>
+                <div class="nav-links-container">
+                    <span class="decorative-line"></span>
+                    <ul class="navbar-nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-section="home" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-section="research" href="#">RESEARCH</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-section="contact" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                    <span class="decorative-line"></span>
+                </div>
+            </div>
 </div>
+</div>
+      </div> <!-- /container-fluid -->
+        </div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    
-<!-- main -->
-<div class="quarto-about-solana column-body">
-  <div class="about-entity">
-    <div class="entity-contents">
-      <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Home</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header>
-      <div class="about-contents"><main class="content" id="quarto-document-content">
+    <div class="quarto-about-solana column-body">
+        <div class="about-entity">
+            <div class="two-column-container">
+                <div class="content-column">
+                    <div class="entity-contents">
+                        <section id="home" class="content-section">
+                            <p><a href="#">Curriculum Vitae</a></p>
 
-<p>Hi! I’m Summiya Najam, an economist currently working as a research fellow at <a href="https://siepr.stanford.edu/" target="_blank">Stanford Institute for Economic Policy Research (SIEPR)</a> with <a href="https://avoena.people.stanford.edu/" target="_blank">Prof. Alessandra Voena</a>.  
-Before joining Stanford, I completed my <a href="https://www.ox.ac.uk/admissions/graduate/courses/msc-economics-development" target="_blank">MSc in Development Economics</a> (with distinction) at the University of Oxford.
-For my undergrad, I had the amazing opportunity to study Economics at <a href="https://www.williams.edu/" target="_blank">Williams College</a>, nestled in the charming Berkshires.</p>
-<p>I grew up in Islamabad, Pakistan, and I miss it every single day. I enjoy reading Urdu poetry, listening to South Asian music, and, when the mood strikes, dancing just for fun.</p>
-<p>In my free time, I mentor students from underrepresented backgrounds to help them apply for graduate studies.
-If you're interested in mentoring, I recommend the <a href="https://www.rsc.ox.ac.uk/news/become-a-mentor-rlrh-application-support-programme-for-students-affected-by-forced-displacement" target="_blank">Oxford Refugee-led Research Hub</a>, an initiative I’ve worked with, where you can help students from displaced backgrounds apply to graduate programs.
-</p>
-<p>Feel free to reach out to me at <a href="mailto:summiya@stanford.edu">summiya@stanford.edu</a>. I’d be happy to share my resume if you’d like!</p>
+                            <p>Hi! I'm Summiya Najam, an economist currently working as a research fellow at <a href="https://siepr.stanford.edu/" target="_blank">Stanford Institute for Economic Policy Research (SIEPR)</a> with <a href="https://avoena.people.stanford.edu/" target="_blank">Prof. Alessandra Voena</a>.</p>
 
-<p>&nbsp;</p>
+                            <p>Before joining Stanford, I completed my <a href="https://www.ox.ac.uk/admissions/graduate/courses/msc-economics-development" target="_blank">MSc in Development Economics</a> (with distinction) at the University of Oxford.
+                            For my undergrad, I had the amazing opportunity to study Economics at <a href="https://www.williams.edu/" target="_blank">Williams College</a>, nestled in the charming Berkshires.</p>
+                            
+                            <p>I grew up in Islamabad, Pakistan, and I miss it every single day. I enjoy reading Urdu poetry, listening to South Asian music, and, when the mood strikes, dancing just for fun.</p>
+                            
+                            <p>In my free time, I mentor students from underrepresented backgrounds to help them apply for graduate studies.
+                            If you're interested in mentoring, I recommend the <a href="https://www.rsc.ox.ac.uk/news/become-a-mentor-rlrh-application-support-programme-for-students-affected-by-forced-displacement" target="_blank">Oxford Refugee-led Research Hub</a>, an initiative I've worked with, where you can help students from displaced backgrounds apply to graduate programs.
+                            </p>
+                            
+                            <p>Feel free to reach out to me at <a href="mailto:summiya@stanford.edu">summiya@stanford.edu</a>. I'd be happy to share my resume if you'd like!</p>
+                        </section>
 
-<h1 class="title">Research</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-<div class="about-contents"><main class="content" id="quarto-document-content">
-<p>Having spent significant parts of my life immersed in two vastly different cultures, I have always been captivated by the immense influence of social norms, over logical reasoning, in shaping individual preferences and behaviors. Unlike the rational agents often depicted in economic models, I observed that people are rarely driven purely by logic. Instead, their actions are shaped by cultural norms, cognitive biases, and entrenched practices, which collectively determine their social and economic outcomes.</p>
+                        <section id="research" class="content-section" style="display: none;">
+                            <h1 class="title">Research</h1>
+                            
+                            <p>Having spent significant parts of my life immersed in two vastly different cultures, I have always been captivated by the immense influence of social norms, over logical reasoning, in shaping individual preferences and behaviors. Unlike the rational agents often depicted in economic models, I observed that people are rarely driven purely by logic. Instead, their actions are shaped by cultural norms, cognitive biases, and entrenched practices, which collectively determine their social and economic outcomes.</p>
 
-<p>My academic interests lie at the intersection of development and behavioral economics, with a particular focus on how institutional design, social norms, and networks influence critical decisions such as marriage timing, fertility choices, and labor force participation in low-income countries. I aim to integrate insights from psychology to deepen our understanding of these complex determinants. Recently, I read Christina Biccheri’s <a href="https://books.google.com/books/about/Norms_in_the_Wild.html?id=f_ySDQAAQBAJ&source=kp_book_description" target="_blank">“Norms in the Wild”</a> and highly recommend it to anyone curious about how we can identify, measure, and shape social norms to drive meaningful change.
-</p>
+                            <p>My academic interests lie at the intersection of development and behavioral economics, with a particular focus on how institutional design, social norms, and networks influence critical decisions such as marriage timing, fertility choices, and labor force participation in low-income countries. I aim to integrate insights from psychology to deepen our understanding of these complex determinants. Recently, I read Christina Biccheri's <a href="https://books.google.com/books/about/Norms_in_the_Wild.html?id=f_ySDQAAQBAJ&source=kp_book_description" target="_blank">"Norms in the Wild"</a> and highly recommend it to anyone curious about how we can identify, measure, and shape social norms to drive meaningful change.</p>
 
-<h4 class="title">Working Paper</h4>
-<ul>
-  <li>Najam, S. (2023). <i>Weather Shocks and Marriage Markets: Age of Marriage, Fertility, and Schooling Decisions in Pakistan</i>. Working Paper. Available <a href="https://www.dropbox.com/scl/fi/hmgduelgaph4tzjo8q8vz/Najam_Marriage_2023.pdf?rlkey=nlymhkkxkefneh0n58bj4tmtq&st=4befzdbo&dl=0 target="_blank">here</a></li>
-</ul>
+                            <h4 class="secondary-title">Working Paper</h4>
+                            <ul>
+                                <li class="paper-title">Najam, S. (2023). <i>Weather Shocks and Marriage Markets: Age of Marriage, Fertility, and Schooling Decisions in Pakistan</i>. Working Paper. Available <a href="https://www.dropbox.com/scl/fi/hmgduelgaph4tzjo8q8vz/Najam_Marriage_2023.pdf?rlkey=nlymhkkxkefneh0n58bj4tmtq&st=4befzdbo&dl=0" target="_blank">here</a></li>
+                            </ul>
+                        </section>
 
-
-</main></div>
+                        <section id="contact" class="content-section" style="display: none;">
+                            <h1 class="title">Contact</h1>
+                            
+                            <p>Summiya Najam</p>
+                            <p>John A. and Cynthia Fry Gunn Building</p>
+                            <p>366 Galvez Street</p>
+                            <p>Stanford, CA 94305-6015</p>
+                            
+                            <p style="margin-top: 20px;">Email: <a href="mailto:summiya@stanford.edu">summiya@stanford.edu</a></p>
+                        </section>
+                    </div>
+                </div>
+                
+                <div class="image-column">
+                    <img src="headshot.jpeg" class="about-image rounded">
+                </div>
+            </div>
+        </div>
     </div>
-    <img src="headshot.jpeg" class="about-image
-  rounded " style="width: 13em; height: 20em; margin-top: 4em;">
-  </div>
 </div>
- <!-- /main -->
+
+<!-- Add this script at the end of the body -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.content-section');
+    const imageColumn = document.querySelector('.image-column');
+    
+    function showSection(sectionId) {
+        // Hide all sections
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Show the target section
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+        }
+        
+        // Show/hide image column based on section
+        if (sectionId === 'home') {
+            imageColumn.style.display = 'block';
+        } else {
+            imageColumn.style.display = 'none';
+        }
+        
+        // Update active state of nav links
+        navLinks.forEach(navLink => {
+            if (navLink.getAttribute('data-section') === sectionId) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
+        });
+    }
+    
+    // Add click event listeners to nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const sectionId = this.getAttribute('data-section');
+            showSection(sectionId);
+        });
+    });
+    
+    // Show home section by default
+    showSection('home');
+});
+</script>
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
